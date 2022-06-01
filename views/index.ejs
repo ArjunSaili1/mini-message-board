@@ -1,11 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+</head>
+<body>
+  <h1><%= title %></h1>
+  <p>Say hello to the world</p>
+  <ul>
+    <% messages.forEach((message)=>{ %>
+      <li class="message">
+        <h3><%= message.text %></h3>
+        <h4><%= message.user %></h4>
+        <h4><%= message.added %></h4>
+      </li>
+    <% }); %>
+  </ul>
+</body>
 </html>
