@@ -10,15 +10,15 @@
     <ul>
       <% messages.forEach((message)=>{ %>
         <li class="message">
-          <h3><%= message.text %></h3>
-          <h4><%= message.user %></h4>
           <% const difference = (new Date().getTime() - message.added.getTime()) / 1000; %>
-          <% if(difference < 60){%><h4>less than a minute ago</h4><%}%>
+          <% if(difference < 60){%><h4 class="time">less than a minute ago</h4><%}%>
           <% if(difference > 60){%>
             <% const minCount = Math.trunc(difference / 60); %>
-            <% if(minCount === 1){%><h4><%=minCount%> minute ago</h4><%}%> 
-            <% if(minCount != 1){%><h4><%=minCount%> minutes ago</h4><%}%> 
+            <% if(minCount === 1){%><h4 class="time"><%=minCount%> minute ago</h4><%}%> 
+            <% if(minCount != 1){%><h4 class="time"><%=minCount%> minutes ago</h4><%}%> 
             <%}%>
+          <h4><%= message.user %></h4>
+          <h3><%= message.text %></h3>
         </li>
       <% }); %>
     </ul>
