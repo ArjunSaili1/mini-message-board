@@ -69,6 +69,10 @@ textarea, input{
   resize: vertical;
 }
 
+a{
+  font-weight: bold;
+}
+
 button{
   width: fit-content;
   padding: 10px 12px;
