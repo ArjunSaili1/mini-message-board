@@ -2,8 +2,9 @@
   "name": "mini-msg-board",
   "version": "0.0.0",
   "private": true,
+  "engines": { "node": "16.13.0" },
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "node ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
